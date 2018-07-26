@@ -2,14 +2,7 @@
 
 // Let's make an AJAX call to the GitHub API and then do a simple render of the data into the DOM
 
-$.ajax({
-  // go get the data
-  url: 'https://api.github.com/user/repos',
-  method: 'GET',
-  headers: {
-    Authorization: `token ${myDamnGitHubToken}`
-  }
-})
+$.get('/github/user/repos')
 .then(
   // render the data
   data => {
